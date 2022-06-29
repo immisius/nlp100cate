@@ -7,6 +7,7 @@ import streamlit as st
 from transformers import logging
 
 logging.set_verbosity_warning()
+logging.set_verbosity_error()
 MAX_LEN=64
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
 def text_preprocessing(text):
